@@ -47,7 +47,7 @@ class Text {
     Update() {}
 }
 
-export class TextBox extends Text {
+class TextBox extends Text {
     constructor(text) {
         super()
         this.text = text
