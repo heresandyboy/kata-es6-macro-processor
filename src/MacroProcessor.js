@@ -6,7 +6,6 @@ class Processor {
 
     Attach(Observer) {
         this.observers.push(Observer);
-        console.log('Observer attached')
     }
 
     Dettach(Observer) {
@@ -16,7 +15,6 @@ class Processor {
     }
 
     Notify(text) {
-        console.log('Subject Notify')
         for (var i in this.observers) {
             this.observers[i].Update(text);
         }
@@ -27,12 +25,10 @@ export default class MacroProcessor extends Processor {
     constructor() {
         super()
         this.observers = []
-        this.subjectState = null
         this.rules = {
             'celebration': 'birthday',
             'name': 'Wilma',
         }
-        console.log('ConcreteSubject created')
     }
 
     replace(text) {
